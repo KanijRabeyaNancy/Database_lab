@@ -1,0 +1,16 @@
+create table challan_details (
+challan_no varchar2(6), FOREIGN KEY(challan_no) REFERENCES challan_header(challan_no),
+product_no varchar2(6), FOREIGN KEY(product_no) REFERENCES product_master(product_no),
+qty_disp number(4,2) NOT NULL
+);
+
+
+insert into challan_details values
+('CH9001','P00001',4);
+('CH9001','P07965',1);
+('CH9001','P07885',1);
+('CH6865','P07868',3);
+('CH6865','P03453',4);
+('CH6865','P00001',10);
+('CH3965','P00001',5);
+('CH3965','P07975',2);

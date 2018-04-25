@@ -1,0 +1,30 @@
+create table salesman_master (
+salesman_no varchar2(6) PRIMARY KEY,
+salesman_name varchar2(6) NOT NULL,
+address1 varchar2(30) NOT NULL,
+address2 varchar2(30),
+city varchar2(20),
+pincode varchar2(6),
+state varchar2(20),
+sal_amt number(8,2) NOT NULL, CHECK (sal_amt>0),
+tgt_to_get number(6,2) NOT NULL, CHECK (tgt_to_get>0),
+ytd_sales number(6,2) NOT NULL,
+remarks varchar2(60)
+);
+
+
+
+
+insert into salesman_master values
+('S00001','Kiran','A/14','Worli','Bombay','400002','MAH',3000,100,50,'Good');
+('S00002','Manish','65','Nariman','Bombay','400001','MAH',3000,200,100,'Good');
+('S00003','Ravi','P-7','Bandra','Bombay','400032','MAH',3000,200,100,'Good');
+('S00004','Ashish','A/5','Juhu','Bombay','400044','MAH',3500,200,150,'Good');
+
+
+
+
+
+
+
+

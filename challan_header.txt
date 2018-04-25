@@ -1,0 +1,11 @@
+create table challan_header (
+challan_no varchar2(6) PRIMARY KEY,
+s_order_no varchar2(6), FOREIGN KEY(s_order_no) REFERENCES sales_order(s_order_no),
+challan_date date NOT NULL,
+billed_yn char(1) DEFAULT 'N' CHECK(billed_yn IN('Y','N')) 
+);
+
+insert into challan_header values
+('CH9001','O19001',date '1995-12-12','Y');
+('CH6865','O46865',date '1995-11-12','Y');
+('CH3965','O10008',date '1995-10-12','Y');
